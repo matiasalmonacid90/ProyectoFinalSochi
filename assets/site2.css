@@ -1,0 +1,276 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.gridContainer {
+    font-size: x-large;
+    display: grid;
+    background-color: black;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, auto);
+    column-gap: 5px;
+    row-gap: 5px;
+    justify-items: stretch;
+    align-items: stretch;
+    justify-content: stretch;
+
+}
+
+.child {
+    /* background-color: rgb(217, 209, 252);    */
+    color: white;
+
+}
+
+
+.child-1 {
+    grid-column: 1/2;
+    background-color: rgb(5, 5, 5);
+    width: auto;
+    border-radius: 10px;
+    margin-top: 2%;
+
+
+}
+
+.child-2 {
+    grid-column: 2/5;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: large;
+    font-weight: bolder;
+    margin-top: 30px;
+
+}
+
+.child-3 {
+    grid-column: 5/6;
+
+    text-align: right;
+    border-radius: 10px;
+    text-overflow: ellipsis;
+    border-radius: 10px;
+
+}
+
+.child-banner {
+    grid-column: 1/6;
+
+}
+
+.child-fotter1 {
+    grid-column: 1/3;
+    background-color: rgb(0, 0, 2);
+
+    border-radius: 10px;
+    margin-top: 2%;
+}
+
+.child-fotter2 {
+    grid-column: 3/5;
+}
+
+.estilo__secciones {
+
+    background-color: rgb(52, 121, 177);
+    padding: 3px;
+
+    text-align: center;
+    border-radius: 10px;
+}
+
+.estilo__secciones__titulos {
+    font-size: medium;
+    text-align: center;
+    padding: 5px;
+    border: solid 2px white;
+    color: rgb(255, 255, 255);
+    font-style: italic;
+    text-decoration: none;
+    background-color: black;
+    display: inline-block;
+    width: 95%;
+    border-radius: 1000px;
+    text-transform: uppercase;
+}
+
+.estilo__secciones__img {
+    width: 270px;
+    height: 200px;
+}
+
+
+.productoDestacado {
+    border-radius: 25px;
+    height: 100%;
+    border-top: solid 5px;
+    border-bottom: solid 5px;
+    /* margin-top: 5px;
+    margin-bottom: 5px; */
+    background-color: rgb(52, 121, 177);
+    text-align: center;
+    border-color: rgb(52, 121, 177);
+    ;
+}
+
+.productoDestacado__comprar {
+    background-color: black;
+    color: white;
+    width: 50%;
+    padding: 10px;
+    font-weight: bold;
+    color: black;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.productoDestacado__descripcion {
+    text-align: justify;
+    line-height: 20px;
+    margin: 10px;
+    color: black;
+}
+
+.estilo__footer {
+    margin-top: 5%;
+    text-align: center;
+    background-color: black;
+    padding: 3px;
+    color: white;
+    border-radius: 10px;
+}
+
+.estilo__footer__img {
+    width: 15%;
+    height: 15%;
+}
+
+.seccion__banner {
+    grid-column: 1/5;
+    background-color: rgb(52, 121, 177);
+    color: white;
+    width: auto;
+    height: 70px;
+    border-top: solid 8px rgb(97, 97, 97);
+    border-bottom: solid 8px rgb(97, 97, 97);
+    padding-top: 1%;
+    text-align: center;
+    font-size: xx-large;
+    border-radius: 10px;
+}
+
+.seccion__volver {
+    grid-column: 5/6;
+    background-color: rgb(240, 240, 240);
+    color: rgb(95, 84, 84);
+    width: auto;
+    height: 85px;
+    border-radius: 50px;
+    padding-top: 5%;
+    text-align: center;
+    font-size: x-large;
+}
+
+.productos {
+    border: solid 5px rgb(88, 86, 86);
+    padding: 1px;
+    border-radius: 25px;
+    background-color: rgb(52, 121, 177);
+    text-align: center;
+    color: black;
+}
+
+.producto__titulo {
+    text-transform: uppercase;
+    font-size: x-large;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+
+}
+
+.producto__img {
+    background-color: none;
+}
+
+.producto__descripcion {
+    text-align: center;
+    margin: 3%;
+}
+
+.producto__talle {
+    text-transform: uppercase;
+    font-size: large;
+    text-align: center;
+    background-color: rgb(88, 86, 86);
+    color: azure;
+    border-radius: 10px;
+
+    margin-top: 1px;
+    margin-bottom: 10px;
+    padding: 2%;
+}
+
+.producto__precio {
+    font-size: xx-large;
+    margin-top: 5%;
+}
+
+
+/*mobile*/
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+    .gridContainer {
+        display: grid;
+        grid-template-areas:
+            "child-1 child-3"
+            "child-2 child-2"
+            "child-banner child-banner"
+            "estilo__secciones estilo__secciones"
+            "estilo__secciones estilo__secciones"
+            "estilo__secciones estilo__secciones"
+            "child-prod child-prod"
+            "child-prod child-prod"
+            "child-fotter1 child-fotter2";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(9,auto);
+    }
+
+    div.child-1 {
+        grid-area: child-1;
+        display: flex;
+    }
+
+    div.child-3 {
+        grid-area: child-3;
+        display: flex;
+    }
+
+    div.child-2{
+        grid-area: child-2;
+    }
+
+    div.child-banner{
+        grid-area: child-banner;
+    }
+    div.estilo__secciones{
+        grid-area: estilo__secciones;
+        display: flex;
+    }
+
+    div.child-prod {
+        grid-area: child-prod;
+        display: inline;
+    }
+
+    div.child-fotter1{
+        grid-area: child-fotter1;
+    }
+    div.child-fotter2{
+        grid-area: child-fotter2;
+    }
+}
