@@ -30,6 +30,7 @@
     width: auto;
     border-radius: 10px;
     margin-top: 2%;
+    transition: scale(1.5);
 
 
 }
@@ -79,6 +80,11 @@
 
     text-align: center;
     border-radius: 10px;
+    transition: transform 5s;
+}
+
+.estilo__secciones:hover{
+    transform: rotate(20deg);
 }
 
 .estilo__secciones__titulos {
@@ -112,7 +118,10 @@
     background-color: rgb(52, 121, 177);
     text-align: center;
     border-color: rgb(52, 121, 177);
-    ;
+  transition: transform 1s;
+}
+.productoDestacado:hover{
+    transform: scale(1.2);
 }
 
 .productoDestacado__comprar {
@@ -274,3 +283,4 @@
         grid-area: child-fotter2;
     }
 }
+
