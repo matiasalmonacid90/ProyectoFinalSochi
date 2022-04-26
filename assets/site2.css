@@ -8,7 +8,7 @@
     display: grid;
     background-color: black;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, auto);
+    grid-template-rows: repeat(6, auto);
     column-gap: 5px;
     row-gap: 5px;
     justify-items: stretch;
@@ -57,7 +57,7 @@
 }
 
 .child-banner {
-    grid-column: 1/6;
+    grid-column: 1/6 !important;
 }
 
 .child-fotter1 {
@@ -156,7 +156,7 @@
 }
 
 .seccion__banner {
-    grid-column: 1/5;
+    grid-column: 1/6 ;
     background-color: rgb(52, 121, 177);
     color: white;
     width: auto;
